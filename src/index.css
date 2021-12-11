@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+css :root { --style-color: #00d10a7e; } 
+css .button:hover { background: red; } 
 
 * {
   padding: 0;
@@ -7,16 +9,33 @@
 }
 
 body {
-  background-color: white;
-  color: black;
+  background-color: #5b2d91;
+  color: whitesmoke;
   font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;
 }
 
+.text
+{
+  padding-top: 10px;
+  padding-bottom: 30px;
+  display: flex;
+  font-family: Georgia, serif;
+  justify-content: center;
+  color: white;
+}
+
+.board .squares:hover 
+{ 
+  background-color: rgb(165, 165, 165);
+  color: black;
+}
+
 .board {
-  border: 1rem solid black;
-  background: black;
+  border-radius: 1rem;
+  border: 1rem solid white;
+  background: white;
   width: 500px;
   height: 500px;
   display: grid;
@@ -24,7 +43,51 @@ body {
   gap: 1rem;
 }
 
+.info-wrapper
+{
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-wrapper button:hover 
+{
+  background-color: rgb(165, 165, 165); 
+  color: black
+} 
+
+.result
+{
+  color: white;
+  font-family: Georiga, serif;
+}
+
+.some
+{
+  color: brown;
+}
+
+.button
+{
+  
+  background-color: white;
+  color: #7342ac;
+  font-size: medium;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 1rem;
+  border: 5px solid #7342ac;
+  width: 125px;
+  height: 50px;
+}
+
+
 .squares {
+  border-radius: 0.5rem;
+  background: #7342ac;
+  color: white;
   border: none;
   font-size: 5rem;
+  cursor: pointer;
+  outline: none;
+  @keyframes fadeInOpacity { 0% { opacity: 0; } 100% { opacity: 1; } } 
 }
