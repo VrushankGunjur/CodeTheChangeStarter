@@ -2,8 +2,6 @@ import React from "react";
 import Square from "./Square";
 
 const Board = ({squares, onClick}) => {
-  // TODO: Populate the board with squares
-
 
 return(
   <div className="board"> 
